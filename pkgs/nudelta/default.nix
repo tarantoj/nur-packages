@@ -15,6 +15,7 @@ in
         license = licenses.gpl3Only;
         homepage = "https://github.com/donn/nudelta";
         changelog = "https://github.com/donn/nudelta/blob/main/Changelog.md";
-        platforms = platforms.linux;
+        platforms = lib.intersectLists platforms.x86_64 platforms.linux;
+        mainProgram = "nudelta";
       };
     }
