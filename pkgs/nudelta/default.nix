@@ -2,7 +2,10 @@ let
   pname = "nudelta";
   version = "0.7.4";
 in
-  {pkgs}:
+  {
+    pkgs,
+    lib,
+  }:
     pkgs.appimageTools.wrapType2 {
       name = pname;
       src = pkgs.fetchurl {
