@@ -12,6 +12,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   jetbrains-resharper-cli = pkgs.callPackage ./pkgs/jetbrains-resharper-cli {};
+  nudelta = pkgs.callPackage ./pkgs/nudelta {};
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
