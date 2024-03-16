@@ -5,7 +5,7 @@ in
   {pkgs}:
     pkgs.appimageTools.wrapType2 {
       name = pname;
-      src = builtins.fetchurl {
+      src = pkgs.fetchurl {
         url = "https://github.com/donn/${pname}/releases/download/${version}/nudelta-amd64.AppImage";
         sha256 = "sha256:130rlaczzbzidjrlqy3czsc829bb16hfi154088qaj7r4la6cblj";
       };
