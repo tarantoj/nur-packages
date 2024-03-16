@@ -2,7 +2,10 @@ let
   pname = "nudelta";
   version = "0.7.4";
 in
-  {pkgs}:
+  {
+    pkgs,
+    lib,
+  }:
     pkgs.appimageTools.wrapType2 {
       name = pname;
       src = pkgs.fetchurl {
@@ -15,6 +18,7 @@ in
         license = licenses.gpl3Only;
         homepage = "https://github.com/donn/nudelta";
         changelog = "https://github.com/donn/nudelta/blob/main/Changelog.md";
-        platforms = platforms.linux;
+        platforms = lib.intersectLists platforms.x86_64 platforms.linux;
+        mainProgram = "nudelta";
       };
     }
