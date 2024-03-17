@@ -6,7 +6,7 @@
 }: let
   cfg = config.services.fw-fanctrl;
   settingsFile = pkgs.writeText "config.json" (builtins.toJSON config.services.fw-fanctrl.settings);
-  fw-fanctrl = pkgs.callPackage ../../pkgs/fw-fanctrl {};
+  fw-fanctrl = pkgs.fw-fanctrl or pkgs.callPackage ../../pkgs/fw-fanctrl {};
 in {
   options.services.fw-fanctrl = with lib; {
     enable = mkEnableOption "fw-fanctrl";
