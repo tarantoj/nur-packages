@@ -93,6 +93,7 @@ in {
       serviceConfig = {
         ExecStart = "${fw-fanctrl}/bin/fanctrl.py --no-log --config ${settingsFile}";
         Type = "simple";
+        ExecStopPost = "${pkgs.fw-ectool}/bin/ectool --interface=lpc autofanctrl";
       };
     };
   };
