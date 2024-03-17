@@ -91,7 +91,7 @@ in {
       wantedBy = ["multi-user.target"];
 
       serviceConfig = {
-        ExecStart = "${fw-fanctrl}/bin/fanctrl.py --config ${settingsFile}";
+        ExecStart = "${fw-fanctrl}/bin/fanctrl.py --no-log --config ${settingsFile}";
         Type = "simple";
       };
     };
