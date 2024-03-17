@@ -96,5 +96,17 @@ in {
         ExecStopPost = "${pkgs.fw-ectool}/bin/ectool --interface=lpc autofanctrl";
       };
     };
+
+    systemd.services.fw-fanctrl-suspend = {
+      description = "";
+
+      before = ["sleep.target"];
+      wantedBy = ["sleep.target"];
+
+      serviceConfig = {
+        ExecStart = "${fw-fanctrl}/bin/fanctrl.py --config ${settingsFile} sleep";
+        Type = "oneshot";
+      };
+    };
   };
 }
