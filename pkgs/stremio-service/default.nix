@@ -24,7 +24,7 @@ rustPlatform.buildRustPackage rec {
 
   server = fetchurl {
     url = "https://dl.strem.io/server/v4.20.3/desktop/server.js";
-    sha256 = "sha256-YtoQG8ppBVpe86DjyRKhDwmHhVRYpIOkEDuH21YseWA=";
+    sha256 = "sha256-ujwsUrEHllwaLH4MbdM2GuWZvbjzydUZgGaZu9F5chU=";
   };
 
   # postInstall = ''
