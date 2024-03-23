@@ -6,7 +6,7 @@
 # commands such as:
 #     nix-build -A mypackage
 {pkgs ? import <nixpkgs> {}}: let
-  yuzuPackages = pkgs.callPackage ./pkgs/yuzu;
+  yuzuPackages = pkgs.callPackage ./pkgs/yuzu {};
 in {
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib {inherit pkgs;}; # functions
