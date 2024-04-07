@@ -23,5 +23,7 @@ in {
   yuzu = yuzuPackages.mainline; # Added 2021-01-25
   yuzu-mainline = yuzuPackages.mainline; # Added 2023-12-29
 
+  ollama-rocm = pkgs.ollama.override {acceleration = "rocm";};
+
   gitignore = pkgs.callPackage ./pkgs/gitignore {};
 }
