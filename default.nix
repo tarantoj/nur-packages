@@ -25,4 +25,5 @@ in {
 
   gitignore = pkgs.callPackage ./pkgs/gitignore {};
   dotnet-t4 = pkgs.callPackage ./pkgs/dotnet-t4 {};
+  zmk-viewer = pkgs.callPackage ./pkgs/zmk-viewer {};
 }
