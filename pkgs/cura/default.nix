@@ -15,11 +15,7 @@ in
 
       meta = with pkgs.lib; {
         description = "An open-source alternative to the NuPhy Console created by reverse-engineering the keyboards' USB protocol.";
-        license = licenses.gpl3Only;
-        homepage = "https://github.com/donn/nudelta";
-        changelog = "https://github.com/donn/nudelta/blob/main/Changelog.md";
         platforms = lib.intersectLists platforms.x86_64 platforms.linux;
-        mainProgram = "nudelta";
       };
     } in writeScriptBin "cura" ''
       #! ${pkgs.bash}/bin/bash
