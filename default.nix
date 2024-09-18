@@ -15,6 +15,7 @@ in {
 
   jetbrains-resharper-cli = pkgs.callPackage ./pkgs/jetbrains-resharper-cli {};
   nudelta = pkgs.callPackage ./pkgs/nudelta {};
+  cura = pkgs.callPackage ./pkgs/cura {};
   fw-fanctrl = pkgs.callPackage ./pkgs/fw-fanctrl {};
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
