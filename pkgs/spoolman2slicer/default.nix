@@ -2,7 +2,7 @@
   pkgs,
   python3Packages,
 }: let
-  pname = "sm2ss";
+  pname = "spoolman2slicer";
   rev = "8a489578eff55e5d2eb0b779e0ec5a7e99cb4a88";
 in
   python3Packages.buildPythonPackage {
@@ -27,7 +27,7 @@ in
             install_requires = f.read().splitlines()
 
         setup(
-          name='sm2ss',
+          name='spoolman2slicer',
           version='0.1.0',
           install_requires=install_requires,
           scripts=[
@@ -42,8 +42,7 @@ in
       '';
 
     postInstall = ''
-      cp -R templates-orcaslicer $out/bin/
-      cp -R templates-superslicer $out/bin/
+      substituteInPlace $out/bin/spoolman2slicer.py --replace-fail "templates-" "$src/templates-"
       mv -v $out/bin/spoolman2slicer.py $out/bin/spoolman2slicer
     '';
   }
