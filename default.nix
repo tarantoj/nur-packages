@@ -25,4 +25,5 @@ in {
 
   gitignore = pkgs.callPackage ./pkgs/gitignore {};
   dotnet-t4 = pkgs.callPackage ./pkgs/dotnet-t4 {};
+  spoolman2slicer = pkgs.callPackage ./pkgs/spoolman2slicer {};
 }
