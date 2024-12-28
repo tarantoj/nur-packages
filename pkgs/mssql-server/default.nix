@@ -82,4 +82,12 @@ stdenv.mkDerivation {
     # sed -i "s|Exec=.*|Exec=eidhr-client|g" $out/share/applications/eidclient.desktop
     # sed -i "s|Exec=.*|Exec=eidhr-signer|g" $out/share/applications/signer.desktop
   '';
+
+  meta = {
+    description = "";
+    homepage = "";
+    license = lib.licenses.unfree;
+    maintainers = with lib.maintainers; [tarantoj];
+    platforms = lib.intersectLists lib.platforms.x86_64 lib.platforms.linux;
+  };
 }
