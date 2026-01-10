@@ -26,4 +26,5 @@ in {
   gitignore = pkgs.callPackage ./pkgs/gitignore {};
   dotnet-t4 = pkgs.callPackage ./pkgs/dotnet-t4 {};
   bigquery-emulator = pkgs.callPackage ./pkgs/bigquery-emulator {};
+  mssql-server = pkgs.callPackage ./pkgs/mssql-server {};
 }
